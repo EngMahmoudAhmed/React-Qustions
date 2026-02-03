@@ -1,0 +1,58 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+.loader {
+  width: 100px;
+  height: 100px;
+  /* background-color: blue; */
+  border: 2px solid #888;
+  border-radius: 30%;
+  animation: 1.5s linear 1s infinite  loader;
+}
+
+@keyframes loader {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.options {
+  width: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.options .btn {
+  margin: 1rem 0px;
+  width: 100%;
+  outline: none;
+  /* transition: all; */
+}
+
+.options .btn:hover{
+  margin-left: 50px;
+  background-color: #888;
+  transition: ease-in-out 1s;
+}

@@ -1,0 +1,229 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "question": "What does HTML stand for?",
+      "options": [
+        "Hyper Text Markup Language",
+        "High Text Machine Language",
+        "Hyperlinks and Text Markup Language",
+        "Home Tool Markup Language"
+      ],
+      "correctAnswer": "Hyper Text Markup Language"
+    },
+    {
+      "id": 2,
+      "question": "Which language is used for styling web pages?",
+      "options": ["HTML", "JQuery", "CSS", "XML"],
+      "correctAnswer": "CSS"
+    },
+    {
+      "id": 3,
+      "question": "Which is not a JavaScript data type?",
+      "options": ["String", "Number", "Boolean", "Float"],
+      "correctAnswer": "Float"
+    },
+    {
+      "id": 4,
+      "question": "Which keyword is used to declare a variable in JavaScript?",
+      "options": ["var", "int", "string", "define"],
+      "correctAnswer": "var"
+    },
+    {
+      "id": 5,
+      "question": "Which company developed JavaScript?",
+      "options": ["Google", "Microsoft", "Netscape", "Apple"],
+      "correctAnswer": "Netscape"
+    },
+    {
+      "id": 6,
+      "question": "Which symbol is used for comments in JavaScript?",
+      "options": ["//", "##", "<!-- -->", "**"],
+      "correctAnswer": "//"
+    },
+    {
+      "id": 7,
+      "question": "Which method converts JSON to JavaScript object?",
+      "options": [
+        "JSON.stringify()",
+        "JSON.parse()",
+        "JSON.convert()",
+        "JSON.toObject()"
+      ],
+      "correctAnswer": "JSON.parse()"
+    },
+    {
+      "id": 8,
+      "question": "Which hook is used for state in React?",
+      "options": ["useEffect", "useState", "useReducer", "useRef"],
+      "correctAnswer": "useState"
+    },
+    {
+      "id": 9,
+      "question": "What is React?",
+      "options": [
+        "JavaScript Framework",
+        "JavaScript Library",
+        "CSS Framework",
+        "Database"
+      ],
+      "correctAnswer": "JavaScript Library"
+    },
+    {
+      "id": 10,
+      "question": "Which command creates a new React app?",
+      "options": [
+        "npm create react-app",
+        "npx create-react-app",
+        "npm install react",
+        "react-new-app"
+      ],
+      "correctAnswer": "npx create-react-app"
+    },
+    {
+      "id": 11,
+      "question": "Which HTTP method is used to get data?",
+      "options": ["POST", "PUT", "GET", "DELETE"],
+      "correctAnswer": "GET"
+    },
+    {
+      "id": 12,
+      "question": "Which status code means 'Not Found'?",
+      "options": ["200", "301", "404", "500"],
+      "correctAnswer": "404"
+    },
+    {
+      "id": 13,
+      "question": "What does API stand for?",
+      "options": [
+        "Application Programming Interface",
+        "Advanced Program Interaction",
+        "Application Process Interface",
+        "Applied Programming Internet"
+      ],
+      "correctAnswer": "Application Programming Interface"
+    },
+    {
+      "id": 14,
+      "question": "Which array method adds an item at the end?",
+      "options": ["push()", "pop()", "shift()", "unshift()"],
+      "correctAnswer": "push()"
+    },
+    {
+      "id": 15,
+      "question": "Which operator is used to compare value and type?",
+      "options": ["==", "=", "===", "!="],
+      "correctAnswer": "==="
+    },
+    {
+      "id": 16,
+      "question": "Which tool is used to manage packages in Node.js?",
+      "options": ["npm", "git", "docker", "webpack"],
+      "correctAnswer": "npm"
+    },
+    {
+      "id": 17,
+      "question": "Which hook runs after component render?",
+      "options": ["useState", "useEffect", "useMemo", "useRef"],
+      "correctAnswer": "useEffect"
+    },
+    {
+      "id": 18,
+      "question": "What is JSX?",
+      "options": [
+        "JavaScript XML",
+        "Java Syntax Extension",
+        "JSON XML",
+        "JavaScript XHR"
+      ],
+      "correctAnswer": "JavaScript XML"
+    },
+    {
+      "id": 19,
+      "question": "Which keyword stops a loop?",
+      "options": ["exit", "stop", "break", "return"],
+      "correctAnswer": "break"
+    },
+    {
+      "id": 20,
+      "question": "Which function converts object to JSON?",
+      "options": [
+        "JSON.parse()",
+        "JSON.stringify()",
+        "JSON.convert()",
+        "JSON.object()"
+      ],
+      "correctAnswer": "JSON.stringify()"
+    },
+    {
+      "id": 21,
+      "question": "Which CSS property changes text color?",
+      "options": ["font-style", "background", "color", "text-align"],
+      "correctAnswer": "color"
+    },
+    {
+      "id": 22,
+      "question": "Which tag is used for images in HTML?",
+      "options": ["<img>", "<image>", "<src>", "<picture>"],
+      "correctAnswer": "<img>"
+    },
+    {
+      "id": 23,
+      "question": "Which lifecycle replaced by hooks?",
+      "options": [
+        "componentDidMount",
+        "componentWillUnmount",
+        "Both",
+        "None"
+      ],
+      "correctAnswer": "Both"
+    },
+    {
+      "id": 24,
+      "question": "Which database is NoSQL?",
+      "options": ["MySQL", "PostgreSQL", "MongoDB", "SQL Server"],
+      "correctAnswer": "MongoDB"
+    },
+    {
+      "id": 25,
+      "question": "Which hook is best for complex state logic?",
+      "options": ["useState", "useEffect", "useReducer", "useRef"],
+      "correctAnswer": "useReducer"
+    },
+    {
+      "id": 26,
+      "question": "Which keyword creates a constant?",
+      "options": ["var", "let", "const", "static"],
+      "correctAnswer": "const"
+    },
+    {
+      "id": 27,
+      "question": "Which tool is used for version control?",
+      "options": ["npm", "git", "node", "vscode"],
+      "correctAnswer": "git"
+    },
+    {
+      "id": 28,
+      "question": "Which port does React run on by default?",
+      "options": ["3000", "8080", "4200", "5000"],
+      "correctAnswer": "3000"
+    },
+    {
+      "id": 29,
+      "question": "Which hook accesses DOM directly?",
+      "options": ["useState", "useEffect", "useRef", "useReducer"],
+      "correctAnswer": "useRef"
+    },
+    {
+      "id": 30,
+      "question": "Which framework is used with React for routing?",
+      "options": [
+        "React Router",
+        "Redux",
+        "Axios",
+        "Formik"
+      ],
+      "correctAnswer": "React Router"
+    }
+  ]
+}
