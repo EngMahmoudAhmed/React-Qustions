@@ -36,6 +36,12 @@
   color: #888;
 }
 
+.question{
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
 .options {
   width: 400px;
   display: flex;
@@ -48,11 +54,23 @@
   margin: 1rem 0px;
   width: 100%;
   outline: none;
-  /* transition: all; */
+  transition: ease-in-out 0.5s;
+}
+
+.options button .correct {
+  background-color: cadetblue;
+}
+
+.options button .wrong {
+  background-color: orange;
+}
+
+.options .btn:focus{
+  margin-left: 50px ;
+  outline: 2px solid orange;
 }
 
 .options .btn:hover{
   margin-left: 50px;
-  background-color: #888;
-  transition: ease-in-out 1s;
+  background-color: transparent;
 }

@@ -1,7 +1,7 @@
 import ReactLogo from "/react.png";
 
 const style = {
-  marginTop: "50px",
+  marginTop: "10px",
   display: "flex",
   alignItems: "center",
   justifyContent: "space-evenly",

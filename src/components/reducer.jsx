@@ -1,4 +1,4 @@
-import { dataRecived, dataFailed, Start } from "./actionsTypes";
+import { dataRecived, dataFailed, Start, dataLoading, answer } from "./actionsTypes";
 import { initialState } from "./initialState";
 
 function reducer(state = initialState, action) {
@@ -11,18 +11,29 @@ function reducer(state = initialState, action) {
         questions: action.payload,
         status: "ready",
       };
+    case dataLoading:
+      return {
+        ...state,
+        status: 'loading'
+      }
     case dataFailed:
       return {
         ...state,
-        status: "error",
+        status: 'error',
       };
-      case Start:
-        return {
-          ...state,
-          status:'active',
-        };
+    case Start:
+      return {
+        ...state,
+        status: 'active',
+      };
+    case answer:
+      return {
+        ...state,
+        answer:action.payload,
+      }
+
     default:
-      throw new Error("new Erorr");
+      return state;
   }
 }
 
