@@ -1,4 +1,4 @@
-import { dataRecived, dataFailed, Start, dataLoading, answer } from "./actionsTypes";
+import { dataRecived, dataFailed, Start, dataLoading, answer, Next } from "./actionsTypes";
 import { initialState } from "./initialState";
 
 function reducer(state = initialState, action) {
@@ -30,6 +30,13 @@ function reducer(state = initialState, action) {
       return {
         ...state,
         answer:action.payload,
+      }
+
+    case Next:
+      return {
+        ...state,
+        index: state.index + 1,
+        answer: null,
       }
 
     default:

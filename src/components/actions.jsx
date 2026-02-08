@@ -1,4 +1,4 @@
-import { dataRecived, dataFailed, Start, dataLoading, answer } from './actionsTypes'
+import { dataRecived, dataFailed, Start, dataLoading, answer, Next } from './actionsTypes'
 
 export const datarecived = (value) => ({
     type: dataRecived,
@@ -23,4 +23,8 @@ export const dataloading = (value) => ({
 export const newAnswer = (value) => ({
     type: answer,
     payload: value
+})
+
+export const nextQuestion = () => ({
+    type: Next,
 })

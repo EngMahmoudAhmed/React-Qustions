@@ -8,6 +8,7 @@ import Loader from "./components/Loader";
 import StartScreen from "./components/StartScreen";
 import Question from "./components/Question";
 import useQuiz from "./context/useQuiz";
+import NextQuestionButton from "./components/NextQuestionButton";
 
 function App() {
   const URL = "http://localhost:9000/questions";
@@ -37,6 +38,7 @@ function App() {
         {status === "error" && <Error />}
         {status === "active" && <Question question={questions[index]} answer={answer} dispatch={dispatch} />}
       </Main>
+      <NextQuestionButton />
     </>
   );
 }
