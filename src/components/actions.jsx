@@ -25,6 +25,7 @@ export const newAnswer = (value) => ({
     payload: value
 })
 
-export const nextQuestion = () => ({
+export const nextQuestion = (value) => ({
     type: Next,
+    payload:value,
 })

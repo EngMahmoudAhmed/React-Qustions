@@ -1,1 +1,1 @@
-export const initialState = { questions: [], status: "loadig", index:0, answer:null };
+export const initialState = { questions: [], status: "loading", index:0, answer:null };

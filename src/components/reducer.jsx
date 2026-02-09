@@ -8,7 +8,7 @@ function reducer(state = initialState, action) {
     case dataRecived:
       return {
         ...state,
-        questions: action.payload,
+        questions: action.payload.questions ?? action.payload,
         status: "ready",
       };
     case dataLoading:
@@ -29,14 +29,15 @@ function reducer(state = initialState, action) {
     case answer:
       return {
         ...state,
+        // status:'answer',
         answer:action.payload,
       }
 
     case Next:
       return {
         ...state,
+        status:'nextQuestion',
         index: state.index + 1,
-        answer: null,
       }
 
     default:

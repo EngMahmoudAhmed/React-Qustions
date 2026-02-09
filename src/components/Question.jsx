@@ -14,7 +14,7 @@ function Question() {
             key={option}
             onClick={() => dispatch(newAnswer(idx))}
             className={`btn ${answer === idx ? "selected" : ""} 
-            ${question.correctAnswer === idx ? "correc" : "wrong"}`}
+            ${question.correctAnswer === idx ? "correct" : "wrong"}`}
           >
             {option}
           </button>

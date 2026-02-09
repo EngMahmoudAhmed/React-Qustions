@@ -12,21 +12,19 @@ import NextQuestionButton from "./components/NextQuestionButton";
 
 function App() {
   const URL = "http://localhost:9000/questions";
-  const { questions, status, index, answer, dispatch} = useQuiz()
-  console.log(status, questions);
-  
+  const { questions, status, index, answer, dispatch } = useQuiz()
+
   const numQuestions = questions.length
-  
+
   useEffect(function () {
     const controller = new AbortController();
-    fetch(URL, {signal:controller.signal})
+    fetch(URL, { signal: controller.signal })
       .then((res) => res.json())
       .then((data) => dispatch(datarecived(data)))
       .catch((err) => dispatch(datafailed(err)));
-      return function(){
-        controller.abort();
-        console.log('fetch aborted');
-      }
+    return function () {
+      controller.abort();
+    }
   }, [dispatch]);
 
   return (
@@ -36,9 +34,21 @@ function App() {
         {status === "ready" && <StartScreen numQuestions={numQuestions} dispatch={dispatch} />}
         {status === "loading" && <Loader />}
         {status === "error" && <Error />}
-        {status === "active" && <Question question={questions[index]} answer={answer} dispatch={dispatch} />}
+        {status === "active" &&
+          <>
+            <Question 
+            question={questions[index]} 
+            answer={answer} 
+            dispatch={dispatch} />
+            
+            <NextQuestionButton 
+            dispatch={dispatch}  
+            answer={answer}
+            />
+          </>
+        }
+        {/* {status === 'nextQuestion' && <NextQuestionButton />} */}
       </Main>
-      <NextQuestionButton />
     </>
   );
 }
