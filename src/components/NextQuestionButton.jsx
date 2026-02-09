@@ -4,16 +4,15 @@ import { nextQuestion } from "./actions"
 
 function NextQuestionButton() {
   const { dispatch, index, questions, answer } = useQuiz()
-  const isLast = !questions || index >= questions.length - 1
   if (answer === null) return null
+  const isLast = index >= questions.length - 1
 
   return (
       <button
         className="btn next"
         onClick={() => dispatch(nextQuestion())}
-        disabled={isLast}
       >
-        Next Question
+        {isLast ? "Finish Quiz" : "Next Question"}
       </button>
   )
 }

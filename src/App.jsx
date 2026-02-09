@@ -34,20 +34,23 @@ function App() {
         {status === "ready" && <StartScreen numQuestions={numQuestions} dispatch={dispatch} />}
         {status === "loading" && <Loader />}
         {status === "error" && <Error />}
-        {status === "active" &&
-          <>
-            <Question 
-            question={questions[index]} 
-            answer={answer} 
-            dispatch={dispatch} />
-            
-            <NextQuestionButton 
-            dispatch={dispatch}  
+        {status === "active" && (
+          <Question
+            question={questions[index]}
             answer={answer}
-            />
-          </>
-        }
-        {/* {status === 'nextQuestion' && <NextQuestionButton />} */}
+            dispatch={dispatch} />
+        )}
+        {status === "finished" && (
+          <div className="finished">
+            <h2>Quiz Complete!</h2>
+            <p>You've answered all {questions.length} quuestion.</p>
+          </div>
+          // <NextQuestionButton 
+          // dispatch={dispatch}  
+          // answer={answer}
+          // />
+        )}
+        {status === 'nextQuestion' && <NextQuestionButton dispatch={dispatch} question={questions[index]} />}
       </Main>
     </>
   );

@@ -1,9 +1,12 @@
 import useQuiz from "../context/useQuiz";
 import { newAnswer } from "./actions";
+import NextQuestionButton from "./NextQuestionButton";
 
 function Question() {
   const { questions, index, answer, dispatch } = useQuiz()
   const question = questions[index]
+
+  if(!question) return null
 
   return (
     <div>
@@ -12,15 +15,18 @@ function Question() {
         {question.options.map((option, idx) => (
           <button
             key={option}
-            onClick={() => dispatch(newAnswer(idx))}
+            onClick={() => answer === null && dispatch(newAnswer(idx))}
+            disabled={answer !== null}
             className={`btn ${answer === idx ? "selected" : ""} 
-            ${question.correctAnswer === idx ? "correct" : "wrong"}`}
+            ${answer !== null && question.correctAnswer === idx ? "correct" : ""}
+            ${answer !== null && answer === idx && question.correctAnswer !== idx ? "correct" : ""}`}
+
           >
             {option}
           </button>
         ))}
       </div>
-      {question.correctAnswer}
+      <NextQuestionButton />
     </div>
   );
 }

@@ -30,15 +30,20 @@ function reducer(state = initialState, action) {
       return {
         ...state,
         // status:'answer',
-        answer:action.payload,
+        answer: action.payload,
       }
 
-    case Next:
+    case Next: {
+      const nextIndex = state.index + 1;
+      const isLastQuestion = nextIndex >= state.questions.length;
+
       return {
         ...state,
-        status:'nextQuestion',
-        index: state.index + 1,
+        index: nextIndex,
+        answer: null,
+        status: isLastQuestion ? 'finished' : 'active'
       }
+    }
 
     default:
       return state;
