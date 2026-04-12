@@ -9,7 +9,7 @@ function Question() {
   if(!question) return null
 
   return (
-    <div>
+      <section>
       <div className="question">{question.question}</div>
       <div className="options">
         {question.options.map((option, idx) => (
@@ -19,7 +19,7 @@ function Question() {
             disabled={answer !== null}
             className={`btn ${answer === idx ? "selected" : ""} 
             ${answer !== null && question.correctAnswer === idx ? "correct" : ""}
-            ${answer !== null && answer === idx && question.correctAnswer !== idx ? "correct" : ""}`}
+            ${answer !== null && answer === idx && question.correctAnswer !== idx ? "wrong" : ""}`}
 
           >
             {option}
@@ -27,7 +27,7 @@ function Question() {
         ))}
       </div>
       <NextQuestionButton />
-    </div>
+      </section>
   );
 }
 

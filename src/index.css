@@ -19,12 +19,12 @@ a {
   text-decoration: inherit;
 }
 
-/* body {
+body {
   margin: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-} */
+}
 
 img {
   width: 15%;
@@ -46,14 +46,3 @@ button {
   cursor: pointer;
 }
 
-
-/* @media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-
-} */

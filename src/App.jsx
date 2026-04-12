@@ -31,14 +31,13 @@ function App() {
     <>
       <Header />
       <Main>
-        {status === "ready" && <StartScreen numQuestions={numQuestions} dispatch={dispatch} />}
         {status === "loading" && <Loader />}
-        {status === "error" && <Error />}
+        {status === "ready" && <StartScreen numQuestions={numQuestions} dispatch={dispatch} />}
         {status === "active" && (
           <Question
-            question={questions[index]}
-            answer={answer}
-            dispatch={dispatch} />
+          question={questions[index]}
+          answer={answer}
+          dispatch={dispatch} />
         )}
         {status === "finished" && (
           <div className="finished">
@@ -51,6 +50,7 @@ function App() {
           // />
         )}
         {status === 'nextQuestion' && <NextQuestionButton dispatch={dispatch} question={questions[index]} />}
+        {status === "error" && <Error />}
       </Main>
     </>
   );
